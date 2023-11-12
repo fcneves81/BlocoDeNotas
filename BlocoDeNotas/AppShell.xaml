@@ -6,9 +6,21 @@
     xmlns:local="clr-namespace:BlocoDeNotas"
     Shell.FlyoutBehavior="Disabled">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:PaginaSobre}"
-        Route="PaginaSobre" />
+    <TabBar>
+
+        <ShellContent
+            Title="Anotações"
+            ContentTemplate="{DataTemplate local:MainPage}"
+            Icon="{OnPlatform 'icon_notes.png', iOS='icon_notes_ios.png', MacCatalyst='icon_notes_ios.png'}"
+        />
+
+        <ShellContent
+            Title="Sobre"
+            ContentTemplate="{DataTemplate local:PaginaSobre}"
+            Icon="{OnPlatform 'icon_about.png', iOS='icon_about_ios.png', MacCatalyst='icon_about_ios.png'}"
+        />
+
+
+    </TabBar>
 
 </Shell>
