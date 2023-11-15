@@ -9,6 +9,9 @@ public partial class PaginaSobre : ContentPage
 
     private async void BtnSobre_Clicked(object sender, EventArgs e)
     {
-        await Launcher.Default.OpenAsync("https://curriculo-fernando-camargo.web.app/");
+        if (BindingContext is Models.Sobre sobre)
+        { 
+        await Launcher.Default.OpenAsync(sobre.MaisInformacoesUrl);
+        }
     }
 }

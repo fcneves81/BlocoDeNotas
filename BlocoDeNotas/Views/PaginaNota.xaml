@@ -10,7 +10,8 @@
         <Editor
             x:Name="TxtEditor"
             Placeholder="Escreva sua anotação"
-            HeightRequest="100" 
+            HeightRequest="100"
+            Text="{Binding Texto}"
         />
 
         <Grid 
